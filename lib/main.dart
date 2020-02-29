@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'login.dart';
 import 'dart:async';
-import 'profile.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -27,15 +26,11 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
-    // TODO: implement initState
-
     super.initState();
-
     Timer(
-      Duration(seconds: 5), () {
-      debugPrint("Splash Done");
-      
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Login()));
+      Duration(seconds: 1), () {
+      //debugPrint("Splash Done");
+      Navigator.push(context, MaterialPageRoute(builder: (context) => login()));
     });
   }
 

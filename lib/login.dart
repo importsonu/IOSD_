@@ -2,19 +2,17 @@ import 'package:flutter/material.dart';
 import 'signup.dart';
 import 'profile.dart';
 
-class Login extends StatefulWidget {
+class login extends StatefulWidget {
   @override
   State<StatefulWidget> createState() {
-    // TODO: implement createState
     return _login();
   }
 }
 
-class _login extends State<Login> {
+class _login extends State<login> {
   var _formKey = GlobalKey<FormState>();
   var iz = '';
   final double _minimumPadding = 5.0;
-  var _currentItemSelected = '';
   int see = 1;
   TextEditingController userController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
@@ -31,8 +29,9 @@ class _login extends State<Login> {
     TextStyle textStyle = Theme.of(context).textTheme.title;
 
     return WillPopScope(
-        onWillPop: () {
+        onWillPop: (){
           moveToLastScreen();
+          return ;
         },
         child: Scaffold(
             resizeToAvoidBottomPadding: false,
